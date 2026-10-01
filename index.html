@@ -104,14 +104,14 @@ h2 { font-size: clamp(2rem, 3.6vw, 3rem); }
 /* Nav */
 .nav {
   position: sticky; top: 0; z-index: 20;
-  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  background: color-mix(in oklab, var(--bg) 97%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent; transition: border-color .3s;
 }
 .nav.scrolled { border-bottom-color: var(--line); }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; }
 .brand { text-decoration: none; font-weight: 650; letter-spacing: -0.02em; line-height: 1.1; font-size: 1.05rem; }
-.brand small { display: block; font-weight: 400; color: var(--muted); font-size: .78rem; letter-spacing: 0; }
+.brand small { display: block; font-weight: 500; color: var(--accent); font-size: .84rem; letter-spacing: 0; }
 .nav-links { display: flex; gap: 28px; list-style: none; padding: 0; }
 .nav-links a { text-decoration: none; color: var(--muted); font-size: .95rem; }
 .nav-links a:hover { color: var(--ink); }
@@ -122,7 +122,6 @@ h2 { font-size: clamp(2rem, 3.6vw, 3rem); }
 /* Hero */
 .hero { padding: 40px 0 56px; }
 .hero .wrap { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; }
-.eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
 .hero h1 { font-size: clamp(2.6rem, 5vw, 4.4rem); margin-bottom: 22px; }
 .hero .lead { margin-bottom: 34px; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -158,10 +157,10 @@ section { padding-block: clamp(72px, 9vw, 120px); }
 .tile { position: relative; overflow: hidden; border-radius: var(--radius); isolation: isolate; color: #f4f6f2; }
 .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform .8s cubic-bezier(.16,1,.3,1); }
 .tile:hover img { transform: scale(1.04); }
-.tile::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgb(10 20 14 / .82) 0%, rgb(10 20 14 / .25) 45%, transparent 70%); }
+.tile::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgb(10 20 14 / .9) 0%, rgb(10 20 14 / .62) 38%, transparent 72%); }
 .tile-body { position: absolute; inset: auto 0 0 0; padding: 26px; }
 .tile h3 { font-size: 1.45rem; margin-bottom: 6px; }
-.tile p { font-size: .98rem; opacity: .9; max-width: 42ch; }
+.tile p { font-size: .98rem; max-width: 42ch; text-shadow: 0 1px 2px rgb(0 0 0 / .45); }
 .tile-a { grid-area: a; } .tile-a h3 { font-size: clamp(1.6rem, 2.4vw, 2.1rem); }
 .tile-b { grid-area: b; } .tile-c { grid-area: c; } .tile-e { grid-area: e; }
 .tile-d { grid-area: d; background: var(--accent); color: var(--accent-ink); }
@@ -174,7 +173,7 @@ section { padding-block: clamp(72px, 9vw, 120px); }
 .reviews .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: center; }
 .reviews-media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
 .rating-line { display: flex; align-items: center; gap: 10px; margin-bottom: 26px; color: var(--muted); }
-.big-quote { font-size: clamp(1.5rem, 2.5vw, 2.05rem); line-height: 1.28; letter-spacing: -0.02em; font-weight: 500; margin-bottom: 18px; }
+.big-quote { font-size: clamp(1.5rem, 2.5vw, 2.05rem); line-height: 1.34; letter-spacing: -0.02em; font-weight: 500; margin-bottom: 18px; }
 .cite { color: var(--muted); font-size: .95rem; }
 .cite b { color: var(--ink); font-weight: 600; }
 .quotes { list-style: none; padding: 0; margin-top: 40px; display: grid; gap: 22px; }
@@ -317,10 +316,9 @@ body > footer a:hover { color: var(--ink); }
   <section class="hero" aria-labelledby="h1">
     <div class="wrap">
       <div>
-        <p class="eyebrow reveal">Paysagiste à Pully et région lausannoise</p>
-        <h1 id="h1" class="reveal" style="--i:1">Des extérieurs qui vivent toute l'année.</h1>
-        <p class="lead reveal" style="--i:2">Conception, plantation et entretien de terrasses, balcons et jardins. Un seul interlocuteur, du premier croquis au suivi des plantes.</p>
-        <div class="hero-ctas reveal" style="--i:3">
+        <h1 id="h1" class="reveal">Des extérieurs qui vivent toute l'année.</h1>
+        <p class="lead reveal" style="--i:1">Paysagiste à Pully : conception, plantation et entretien de terrasses, balcons et jardins. Un seul interlocuteur, du croquis au suivi.</p>
+        <div class="hero-ctas reveal" style="--i:2">
           <a class="btn btn-primary" href="#devis">Demander un devis <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
           <a class="btn btn-ghost" href="tel:+41796390021"><i class="ph ph-phone" aria-hidden="true"></i>079 639 00 21</a>
         </div>
